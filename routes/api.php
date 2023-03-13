@@ -15,6 +15,13 @@ use App\Http\Controllers\Api\PostController as PostController;
 |
 */
 
+Route::get('/test',function(){
+    return response()->json([
+        'name' =>'New york',
+        'state' => 'Usa'
+    ]);
+});
+
 Route::get('/posts',[PostController::class, 'index']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
