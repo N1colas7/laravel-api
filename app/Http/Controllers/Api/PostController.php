@@ -18,4 +18,7 @@ class PostController extends Controller
             'posts' => $posts
         ]);
     }
+    public function show($slug){
+
+    }
 }

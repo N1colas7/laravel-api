@@ -8,6 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Address;
 
 class NewContact extends Mailable
 {
@@ -34,6 +35,7 @@ class NewContact extends Mailable
     {
         return new Envelope(
             replyTo: 'info@boolpress.com',
+            from: new Address('info@boolpress.com', 'Boolpress') ,
             subject: 'Nuovo Post inserito',
         );
     }
