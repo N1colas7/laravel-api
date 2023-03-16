@@ -23,6 +23,7 @@ Route::get('/test',function(){
 });
 
 Route::get('/posts',[PostController::class, 'index']);
+Route::get('/contacts',[]);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
